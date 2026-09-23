@@ -13,7 +13,7 @@ This repository contains a polished static marketing site built to position the 
 - Proof section and testimonial
 - Conversion-oriented pricing cards
 - Process and FAQ sections
-- Contact form with front-end interaction
+- Contact form ready for Netlify form handling
 - Responsive design for mobile and desktop
 
 ## Run locally
@@ -31,19 +31,32 @@ Then visit http://localhost:3000
 
 - `index.html` – marketing page structure
 - `styles.css` – premium visual design and responsive layout
-- `script.js` – mobile menu, FAQ accordion, reveal animations, and contact form feedback
+- `script.js` – mobile menu, FAQ accordion, reveal animations
 - `assets/favicon.svg` – brand icon
 
-## Deployment checklist
+## Netlify deployment
 
-Before launch, connect the contact form to a real endpoint such as Formspree, Getform, or a custom email workflow.
+This repo is configured for a static site deploy on Netlify.
 
-Also recommended:
-- set up analytics for conversion tracking
-- add real business branding and testimonials
-- connect a custom domain
-- make sure the headline and offer match your actual service and pricing
+1. Push this repo to GitHub.
+2. Sign in to Netlify.
+3. Click “Add new site” → “Import an existing project”.
+4. Select this repository.
+5. Keep the build command blank and publish directory as `.`.
+6. Deploy the site.
+7. After deployment, open Site settings → Forms and enable email notifications.
+
+## Contact form setup
+
+The form is configured for Netlify Forms using:
+
+```html
+<form class="contact-form" name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
+```
+
+This means Netlify will capture submissions automatically when the site is live on Netlify.
 
 ## Recommended next step
 
-Deploy to Netlify or Vercel to make the site publicly available and begin collecting leads.
+Deploy to Netlify and connect the live form to your inbox or Formspree.
