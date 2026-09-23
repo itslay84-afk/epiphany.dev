@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Epiphany.dev logo">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#86efac" />
+      <stop offset="100%" stop-color="#69d2ff" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#081119" />
+  <path d="M18 48V16h11.5c7 0 11.5 4.5 11.5 10.8 0 6.9-4.9 11.2-12.3 11.2H27.5V48H18zm9.5-15.7h2.3c3.7 0 5.6-1.7 5.6-4.8 0-3-2-4.6-5.7-4.6h-2.2v9.4z" fill="url(#g1)" />
+</svg>
