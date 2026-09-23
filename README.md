@@ -1,39 +1,49 @@
 # epiphany.dev
 
-A polished, responsive landing page for a creative digital studio brand called Epiphany.dev.
+A premium, conversion-focused landing page for a digital design and growth studio.
 
 ## Overview
 
-This repository contains a complete front-end marketing website that includes:
-- A modern hero section and brand messaging
-- About, work, process, testimonial, and contact sections
-- Responsive mobile navigation
-- Smooth reveal animations and form feedback
-- Clean HTML, CSS, and JavaScript without external build tooling
+This repository contains a polished static marketing site built to position the business around revenue, leads, and premium conversion design.
+
+## Included sections
+
+- Clear value proposition and CTA
+- Service offering focused on business growth
+- Proof section and testimonial
+- Conversion-oriented pricing cards
+- Process and FAQ sections
+- Contact form with front-end interaction
+- Responsive design for mobile and desktop
 
 ## Run locally
 
-Because this is a static site, you can open `index.html` directly in a browser, or serve it with a local HTTP server:
-
-### Option 1: Python
+Open `index.html` directly in a browser, or serve it locally:
 
 ```bash
 cd epiphany.dev
 python3 -m http.server 3000
 ```
 
-Then open http://localhost:3000
-
-### Option 2: VS Code Live Server
-
-Open the project in VS Code and use the Live Server extension.
+Then visit http://localhost:3000
 
 ## Files
 
-- `index.html` – Main page structure
-- `styles.css` – Visual design and responsive layout
-- `script.js` – Mobile menu behavior, reveal animations, and form interaction
+- `index.html` – marketing page structure
+- `styles.css` – premium visual design and responsive layout
+- `script.js` – mobile menu, FAQ accordion, reveal animations, and contact form feedback
+- `assets/favicon.svg` – brand icon
 
-## Customization
+## Deployment checklist
 
-Update the copy, project cards, colors, and branding to match your business or personal identity.
+Before launch, connect the contact form to a real endpoint such as Formspree, Getform, or a custom email workflow.
+
+Also recommended:
+- set up analytics for conversion tracking
+- add real business branding and testimonials
+- connect a custom domain
+- make sure the headline and offer match your actual service and pricing
+
+## Recommended next step
+
+Deploy to Netlify or Vercel to make the site publicly available and begin collecting leads.

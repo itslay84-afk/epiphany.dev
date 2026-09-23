@@ -2,6 +2,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const revealItems = document.querySelectorAll('.reveal');
 const yearElement = document.getElementById('year');
+const faqItems = document.querySelectorAll('.faq-item');
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
@@ -35,6 +36,26 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
+faqItems.forEach((item) => {
+  const button = item.querySelector('.faq-question');
+  if (!button) return;
+
+  button.addEventListener('click', () => {
+    const isOpen = item.classList.contains('active');
+
+    faqItems.forEach((faq) => {
+      faq.classList.remove('active');
+      const faqButton = faq.querySelector('.faq-question');
+      if (faqButton) faqButton.setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
 const contactForm = document.querySelector('.contact-form');
 
 if (contactForm) {
@@ -43,7 +64,7 @@ if (contactForm) {
     const button = contactForm.querySelector('button');
     if (button) {
       const originalText = button.textContent;
-      button.textContent = 'Thanks!';
+      button.textContent = 'Inquiry sent';
       button.disabled = true;
       setTimeout(() => {
         button.textContent = originalText;
